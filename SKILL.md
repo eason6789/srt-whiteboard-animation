@@ -155,6 +155,18 @@ python scripts/build_audio.py --project <dir> verify    # 只跑量化校验
 - **修改要局部可重做**：渲染脚本支持单幕参数覆盖，不要每次都全量重渲。
 - **字幕必须与原文一字不差**，且一比一对应到画面段落。
 
+## 安装
+
+```bash
+git clone https://github.com/eason6789/srt-whiteboard-animation.git \
+    ~/.agents/skills/srt-whiteboard-animation
+# 或 ~/.claude/skills/ 、 ~/.config/<agent>/skills/ 等对应目录
+
+cd ~/.agents/skills/srt-whiteboard-animation
+python scripts/prepare_env.py --check   # 探测依赖，末行输出 ENV_PY=<路径>
+python scripts/prepare_env.py           # 缺则建 .venv
+```
+
 ## 目录约定
 
 在用户项目中创建：
